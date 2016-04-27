@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>wszystkomizjedli</title>
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+
+		
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+
+
+
+<script> 
+
+/*var clouds  = function() {
+
+  $('#content2').animate({'margin-left':'0px'}, 40000,'linear', clouds);
+
+
+};
+
+
+$(document).ready(clouds);*/
+
+$(document).ready(function() {   
+  function clouds() {
+    $('#content2').animate({'margin-left':'0px'},40000, 'linear').animate({'margin-left':'-3000px'},10,  clouds); 
+  }
+
+  clouds();
+});
+
+
+</script> 
+
+
+<!-- START SOUND CODE V4.1 HTML5 -->
+<script language="JavaScript" type="text/javascript">
+<!--
+
+// PLAYER VARIABLES
+
+var mp3snd = "my2.mp3";
+var oggsnd = "my2.ogg";
+
+document.write('<audio loop autoplay="autoplay">'); 
+document.write('<source src="'+mp3snd+'" type="audio/mpeg">');
+document.write('<source src="'+oggsnd+'" type="audio/ogg">');
+document.write('<!--[if lt IE 9]>');
+document.write('<bgsound src="'+mp3snd+'" loop="100">');
+document.write('<![endif]-->');
+document.write('</audio>');
+
+//-->
+
+
+
+</script>
+
+<script language="JavaScript" type="text/javascript">
+
+
+
+</script>
+
+<br>
+<!-- END SOUND CODE V4.1 -->
+
+
+</head>
+<body>
+	 
+	<div id="content_wrapper">
+	
+		<div id="content">
+
+
+		
+			<img src="tr.png"/>
+      Ahoj
+      Ahoj
+      Ahoj
+      Ahoj
+      Ahoj
+      <div>To dzik</div>
+      
+			<div id="content2">
+
+			
+			</div>
+		</div>
+	</div>	
+
+<div id="footer"><img src="tr.png"/></div>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>wszystkomizjedli</title>
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+
+		
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.custom.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="jquery-1.10.2.min.js"></script>
+
+
+
+
+<script> 
+
+$(document).ready(function(){
+
+
+	$('#content2').animate({'margin-left':'0px'}, 40000,'linear');
+
+
+
+
+
+
+
+
+
+});
+
+
+function geoFindMe() {
+  var output = document.getElementById("out");
+
+  if (!navigator.geolocation){
+    output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
+    return;
+  }
+
+  function success(position) {
+    var latitude  = position.coords.latitude;
+    var longitude = position.coords.longitude;
+
+    output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
+
+    var img = new Image();
+    img.src = "http://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
+
+    output.appendChild(img);
+  };
+
+  function error() {
+    output.innerHTML = "Unable to retrieve your location";
+  };
+
+  output.innerHTML = "<p>Locating…</p>";
+
+  navigator.geolocation.getCurrentPosition(success, error);
+}
+
+</script> 
+
+
+<!-- START SOUND CODE V4.1 HTML5 -->
+<script language="JavaScript" type="text/javascript">
+<!--
+
+// PLAYER VARIABLES
+
+var mp3snd = "my.mp3";
+var oggsnd = "my.ogg";
+
+document.write('<audio loop autoplay="autoplay">'); 
+document.write('<source src="'+mp3snd+'" type="audio/mpeg">');
+document.write('<source src="'+oggsnd+'" type="audio/ogg">');
+document.write('<!--[if lt IE 9]>');
+document.write('<bgsound src="'+mp3snd+'" loop="100">');
+document.write('<![endif]-->');
+document.write('</audio>');
+
+//-->
+
+
+
+</script>
+
+<script language="JavaScript" type="text/javascript">
+
+
+
+</script>
+
+<br>
+<!-- END SOUND CODE V4.1 -->
+
+
+</head>
+<body>
+	 
+	<div id="content_wrapper">
+		<p><button onclick="geoFindMe()">Show my location</button></p>
+<div id="out"></div>
+
+<script>
+var x=document.getElementById("demo");
+function getLocation()
+  {
+  if (navigator.geolocation)
+    {
+    navigator.geolocation.getCurrentPosition(showPosition);
+    }
+  else{x.innerHTML="Geolocation is not supported by this browser.";}
+  }
+function showPosition(position)
+  {
+  x.innerHTML="Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude; 
+  }
+</script>
+
+		<div id="content">
+
+
+		
+			<img src="tr.png"/>
+			<div id="content2">
+
+			
+			</div>
+		</div>
+	</div>	
+
+<div id="footer"><img src="tr.png"/></div>
+
+</body>
+</html>
